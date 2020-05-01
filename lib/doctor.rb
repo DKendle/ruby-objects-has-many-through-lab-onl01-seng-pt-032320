@@ -28,7 +28,7 @@ end
   end
 
   def patients
-    self.appointments.map {|app| appt.patient}
+    self.appointments.map {|appt| appt.patient}
   end
 # doctor_obj.patients
 
