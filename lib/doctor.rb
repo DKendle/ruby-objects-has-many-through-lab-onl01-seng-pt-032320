@@ -19,12 +19,18 @@ end
     Appointment.all.select {|appt| appt.doctor == self}
   end
 
+# doctor_obj.appointments
+# =>  [array with all appts whose doctor == doctor_obj]
+
+
   def new_appointment(date, patient)
     Appointment.new(date, patient, self)
   end
 
   def patients
-    self.appointments.map {|appt| appt.patient}
+    self.appointments.map {|app| appt.patient}
   end
+# doctor_obj.patients
+
 
 end
